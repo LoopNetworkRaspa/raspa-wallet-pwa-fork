@@ -1,0 +1,13 @@
+diff --git a/node_modules/@karlsen/core-lib/lib/networks.js b/node_modules/@karlsen/core-lib/lib/networks.js
+index bad3149..ae7ad9f 100644
+--- a/node_modules/@karlsen/core-lib/lib/networks.js
++++ b/node_modules/@karlsen/core-lib/lib/networks.js
+@@ -225,7 +225,7 @@ var livenet = get('livenet');
+ var regtest = get('regtest');
+ var testnet = get('testnet');
+ 
+-const karlsenNetworks = ['karlsen', 'karlsendev', 'karlsenreg', 'karlsentest', 'karlsensim'];
++const karlsenNetworks = [ 'raspadev', 'karlsen', 'karlsendev', 'karlsenreg', 'karlsentest', 'karlsensim'];
+ 
+ karlsenNetworks.map((str) => {
+   addNetwork({

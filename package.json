@@ -7,7 +7,9 @@
   "scripts": {
     "prepare": "npx webpack",
     "prepublishOnly": "rm -rf ./dist && rm -f package-lock.json && npm install --also=dev",
-    "startserver": "node pwa.js --grpc 127.0.0.1:42110 --mainnet --debug --verbose --host 0.0.0.0"
+    "startserver": "node pwa.js --grpc 127.0.0.1:42110 --mainnet --debug --verbose --host 0.0.0.0",
+    "startdev": "node pwa.js --grpc 3.76.167.9:16510 --devnet --debug --verbose --host 0.0.0.0",
+    "postinstall": "patch-package"
   },
   "authors": [
     {
@@ -28,7 +30,7 @@
     "@karlsen/grpc": ">=1.4.0",
     "@karlsen/grpc-node": ">=1.0.8",
     "@karlsen/grpc-web": ">=1.0.2",
-    "@karlsen/ux": "file:../node-karlsen-ux",
+    "@karlsen/ux": "file:../raspa-wallet-ux-fork",
     "@karlsen/wallet": ">=1.4.26",
     "@karlsen/wallet-worker": ">=1.1.25",
     "@webcomponents/webcomponentsjs": "2.6.0",
@@ -44,17 +46,18 @@
     "lit-element": "3.2.2",
     "lit-html": "2.7.2",
     "node-fetch": "2.6.7",
+    "secp256k1-wasm": ">=2.0.0",
     "sockjs": "0.3.24",
     "sockjs-client": "1.6.1",
     "url": "0.11.0",
-    "ws": "7.5.9",
-    "secp256k1-wasm": ">=2.0.0"
+    "ws": "7.5.9"
   },
   "devDependencies": {
     "acorn": "8.8.0",
     "ajv": "6.12.6",
     "assert": "2.0.0",
     "crypto-browserify": "3.12.0",
+    "patch-package": "^8.0.0",
     "process": "0.11.10",
     "stream-browserify": "3.0.0",
     "webpack": "5.78.0",

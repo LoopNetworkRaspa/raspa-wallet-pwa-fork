@@ -7,3 +7,4 @@ __wallet.txt
 certificates
 .script-hash
 .DS_Store
+.vscode
