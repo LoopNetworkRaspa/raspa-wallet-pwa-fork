@@ -30,7 +30,7 @@
     "@karlsen/grpc": ">=1.4.0",
     "@karlsen/grpc-node": ">=1.0.8",
     "@karlsen/grpc-web": ">=1.0.2",
-    "@karlsen/ux": "file:../raspa-wallet-ux-fork",
+    "@karlsen/ux": "file:./raspa-wallet-ux-fork",
     "@karlsen/wallet": ">=1.4.26",
     "@karlsen/wallet-worker": ">=1.1.25",
     "@webcomponents/webcomponentsjs": "2.6.0",
