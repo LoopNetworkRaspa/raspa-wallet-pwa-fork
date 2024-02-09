@@ -42,6 +42,7 @@ jobs:
           sudo docker load -i '${{ env.name }}'.tar && \
           sudo docker stop '${{ env.name }}' ; \
           sudo docker run -d --restart always -p '${{ vars.PORT }}':'${{ vars.PORT }}' \
+          -e DEV_EXPLORER_URL='${{ var.DEV_EXPLORER_URL }}' \
           --name '${{ env.name }}'-new '${{ env.name }}':'${{ env.tag }}' && \
           sudo docker rm '${{ env.name }}' && sudo docker rmi $(sudo docker images -q); \
           sudo docker rename '${{ env.name }}'-new '${{ env.name }}' && \
