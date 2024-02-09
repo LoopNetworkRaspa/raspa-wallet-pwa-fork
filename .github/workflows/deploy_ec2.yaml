@@ -15,7 +15,6 @@ jobs:
       name: ${GITHUB_REPOSITORY#*/}"-dev"
       tag: $(git rev-parse --short ${{ github.sha }})
       host: ${{ secrets.DEV_NAME }}@${{ secrets.DEV_IP }}
-      key: "ssh_key"
 
     steps:
       - name: Checkout code
@@ -23,13 +22,15 @@ jobs:
 
       - name: Build docker image
         run: |
-          docker build . -t ${{ env.name }}:${{ env.tag }} -f docker/Dockerfile
+          docker build . -t ${{ env.name }}:${{ env.tag }}
 
       - name: Save docker image
         run: |
           docker save -o ${{ env.name }}.tar ${{ env.name }}:${{ env.tag }}
 
       - name: Copy image to EC2
+        env:
+          key: "ssh_key"
         run: |
           echo "${{ secrets.DEV_SSH_KEY }}" > ${key}
           sudo chmod 400 ${key}
@@ -41,6 +42,7 @@ jobs:
           sudo docker load -i '${{ env.name }}'.tar && \
           sudo docker stop '${{ env.name }}' ; \
           sudo docker run -d --restart always -p '${{ vars.PORT }}':'${{ vars.PORT }}' \
+          -e DEV_EXPLORER_URL='${{ var.DEV_EXPLORER_URL }}' \
           --name '${{ env.name }}'-new '${{ env.name }}':'${{ env.tag }}' && \
           sudo docker rm '${{ env.name }}' && sudo docker rmi $(sudo docker images -q); \
           sudo docker rename '${{ env.name }}'-new '${{ env.name }}' && \
