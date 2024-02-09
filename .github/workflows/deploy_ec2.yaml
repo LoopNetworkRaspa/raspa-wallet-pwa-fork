@@ -23,6 +23,10 @@ jobs:
 
       - name: Build docker image
         run: |
+          echo "EXPLORER_URL='${{ vars.DEV_EXPLORER_URL }}" >> .env
+
+      - name: Build docker image
+        run: |
           docker build . -t ${{ env.name }}:${{ env.tag }} -f docker/Dockerfile
 
       - name: Save docker image
@@ -41,7 +45,6 @@ jobs:
           sudo docker load -i '${{ env.name }}'.tar && \
           sudo docker stop '${{ env.name }}' ; \
           sudo docker run -d --restart always -p '${{ vars.PORT }}':'${{ vars.PORT }}' \
-          -e EXPLORER_URL='${{ vars.DEV_EXPLORER_URL }}' \
           --name '${{ env.name }}'-new '${{ env.name }}':'${{ env.tag }}' && \
           sudo docker rm '${{ env.name }}' && sudo docker rmi $(sudo docker images -q); \
           sudo docker rename '${{ env.name }}'-new '${{ env.name }}' && \
