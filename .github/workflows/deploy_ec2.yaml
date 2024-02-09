@@ -22,7 +22,7 @@ jobs:
 
       - name: Build docker image
         run: |
-          docker build . -t ${{ env.name }}:${{ env.tag }}
+          docker build . -t ${{ env.name }}:${{ env.tag }} -f docker/Dockerfile
 
       - name: Save docker image
         run: |
