@@ -354,7 +354,7 @@ export class KarlsenWalletUI extends BaseElement{
 							`:''
 						}
 						<div class="tx-date" title="#${skip+i+1} Transaction">${tx.date}</div>
-						<div class="tx-amount">${tx.in?'':'-'}${KLS(tx.amount)} KLS</div>
+						<div class="tx-amount">${tx.in?'':'-'}${KLS(tx.amount)} RAS</div>
 						<div class="br tx-note">${tx.note}</div>
 						<div class="br tx-id">
 							<a target="_blank" href="${EXPLORER_URL}/txs/${tx.id.split(":")[0]}">${tx.id.split(":")[0]}</a>
@@ -521,7 +521,7 @@ export class KarlsenWalletUI extends BaseElement{
 						<div class="tx-date" title="#${skip+i+1} UTXO">
 							${tx.blockDaaScore} (${tx.mass})
 						</div>
-						<div class="tx-amount">${KLS(tx.satoshis)} KLS</div>
+						<div class="tx-amount">${KLS(tx.satoshis)} RAS</div>
 						<div class="br tx-mass"></div>
 						<div class="br tx-id">
 							<a target="_blank" href="${EXPLORER_URL}/txs/${tx.txId}">${tx.id}</a>
@@ -1437,7 +1437,7 @@ export class KarlsenWalletUI extends BaseElement{
 			value:'',
 			max,
 			heading:i18n.t('Request funds'),
-			inputLabel:i18n.t('Amount in KLS')
+			inputLabel:i18n.t('Amount in RAS')
 		}, ({value:amount, dialog})=>{
 			let sompis = formatForMachine(amount||0);
 			if(sompis > this.faucetFundsAvailable){

@@ -582,12 +582,12 @@
   "zh" : "内置 Karlsend 挖矿",
   "zh_HANS" : ""
 }, {
-  "en" : "Recipient Address (Must start with 'karlsen' prefix)",
+  "en" : "Recipient Address (Must start with 'raspadev' prefix)",
   "de" : "Empfänger Adresse (Muss immer mit Prefix 'karlsen' beginnen)",
-  "fr" : "Recipient Address (Must start with 'karlsen' prefix)",
+  "fr" : "Recipient Address (Must start with 'raspadev' prefix)",
   "id" : "Alamat Penerima (Harus dimulai dengan awalan 'karlsen')",
   "it" : "Indirizzo del destinatario (deve iniziare con il prefisso 'karlsen')",
-  "ja" : "Recipient Address (Must start with 'karlsen' prefix)",
+  "ja" : "Recipient Address (Must start with 'raspadev' prefix)",
   "ko" : "수신 주소('karlsen' 접두사로 시작해야 함)",
   "pt_BR" : "Endereço do Destinatário (deve começar com o prefixo 'karlsen')",
   "zh" : "接受地址 (必须为 'karlsen' 开头)",
@@ -1341,7 +1341,7 @@
   "zh" : "成功！",
   "zh_HANS" : ""
 }, {
-  "en" : "Amount in KLS",
+  "en" : "Amount in RAS",
   "de" : "Menge in KLS",
   "fr" : "Montant en KLS",
   "id" : "Jumlah dalam KLS",

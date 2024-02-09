@@ -39,7 +39,7 @@ class KarlsenT9Dialog extends KarlsenDialog{
 	}
 	renderBody(){
 		let value = this.value || '';
-		let {inputLabel='Amount in KLS'} = this;
+		let {inputLabel='Amount in RAS'} = this;
 		return html`
 		<flow-input class="full-width" clear-btn value="${value}"
 			label="${inputLabel}" readonly @changed=${this.onInputChange}>
@@ -70,7 +70,7 @@ class KarlsenT9Dialog extends KarlsenDialog{
 		this.value = args.value||'';
 		this.max = args.max||'';
 		this.heading = args.title||args.heading||i18n.t('Amount');
-		this.inputLabel = args.inputLabel||i18n.t('Amount in KLS');
+		this.inputLabel = args.inputLabel||i18n.t('Amount in RAS');
 		this.show();
 	}
     cancel(){

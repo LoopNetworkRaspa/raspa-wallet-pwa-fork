@@ -78,7 +78,7 @@ class KarlsenSendDialogMobile extends KarlsenDialog{
 			</div>
 			${this.renderAddress()}
 			<flow-input class="amount full-width" suffix-btn outer-border
-				label="${T('Amount in KLS')}" @keyup=${this.onAmountChange}>
+				label="${T('Amount in RAS')}" @keyup=${this.onAmountChange}>
 				<flow-btn slot="suffix" class="primary"
 					@click="${this.showT9}"><fa-icon icon="keyboard"></fa-icon></flow-btn>
 			</flow-input>
@@ -122,9 +122,9 @@ class KarlsenSendDialogMobile extends KarlsenDialog{
 		<div class="estimate-tx">
 			<table>
 				${txSize?html`<tr><td is="i18n-td">Transaction Size</td><td>${txSize.toFileSize()}</td></tr>`:''}
-				${dataFee?html`<tr><td is="i18n-td">Data Fee</td><td>${KLS(dataFee)} KLS</td></tr>`:''}
-				${fee?html`<tr><td is="i18n-td">Total Fee</td><td>${KLS(fee)} KLS</td></tr>`:''}
-				${totalAmount?html`<tr><td is="i18n-td">Total Amount</td><td> ${KLS(totalAmount)} KLS</td></tr>`:''}
+				${dataFee?html`<tr><td is="i18n-td">Data Fee</td><td>${KLS(dataFee)} RAS</td></tr>`:''}
+				${fee?html`<tr><td is="i18n-td">Total Fee</td><td>${KLS(fee)} RAS</td></tr>`:''}
+				${totalAmount?html`<tr><td is="i18n-td">Total Amount</td><td> ${KLS(totalAmount)} RAS</td></tr>`:''}
 			</table>
 		</div>
 		`
