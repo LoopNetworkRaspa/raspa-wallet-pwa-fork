@@ -6,6 +6,9 @@ import {
 	FlowI18nDialog, askForPassword, i18n, getLocalWallet, Wallet
 } from './karlsen-wallet-ui.js';
 export {isMobile, dontInitiatedComponent};
+
+const EXPLORER_URL = process.env.EXPLORER_URL || "http://localhost:3000"
+
 export class KarlsenWalletMobile extends KarlsenWalletUI{
 
 	static get properties() {
@@ -593,7 +596,7 @@ export class KarlsenWalletMobile extends KarlsenWalletUI{
 		if (!address)
 			return
 		// let url = `https://explorer.karlsencoin.com/addresses/${address}`;
-		let url = `http://localhost:3000/addresses/${address}`;
+		let url = `${EXPLORER_URL}/addresses/${address}`;
 
 		window.open(url);
 	}

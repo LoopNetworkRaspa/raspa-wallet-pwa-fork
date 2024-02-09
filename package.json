@@ -8,7 +8,8 @@
     "prepare": "npx webpack",
     "prepublishOnly": "rm -rf ./dist && rm -f package-lock.json && npm install --also=dev",
     "startserver": "node pwa.js --grpc 127.0.0.1:42110 --mainnet --debug --verbose --host 0.0.0.0",
-    "startdev": "node pwa.js --grpc 3.76.167.9:16510 --devnet --debug --verbose --host 0.0.0.0",
+    "__startdev": "node pwa.js --grpc 3.76.167.9:16510 --devnet --debug --verbose --host 0.0.0.0",
+    "startdev": "node pwa.js --grpc 35.157.15.120:16510 --devnet --debug --verbose --host 0.0.0.0",
     "postinstall": "patch-package"
   },
   "authors": [
@@ -41,6 +42,7 @@
     "cookie": "0.5.0",
     "cookie-signature": "1.2.0",
     "decimal.js": "10.4.0",
+    "dotenv-webpack": "^8.0.1",
     "express": "4.17.1",
     "express-session": "1.17.1",
     "lit-element": "3.2.2",

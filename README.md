@@ -1,3 +1,9 @@
+## Set up the environment
+Create an `.env` file and add these environment variables:
+```
+EXPLORER_URL=[netloc][:port]
+```
+
 ## Installation
 
 ```

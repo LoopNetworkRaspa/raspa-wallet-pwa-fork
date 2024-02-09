@@ -5,6 +5,7 @@ const pkg = require("./package.json");
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const {version, codename} = pkg;
 const PWA = {version, codename};
+const Dotenv = require('dotenv-webpack');
 //console.log("webpack.optimize.DedupePlugin", webpack)
 let mode = "production";
 let watch = false;
@@ -91,7 +92,8 @@ module.exports = {
           handler: 'NetworkFirst'
         }
       ]
-    })
+    }),
+    new Dotenv()
   ],
   stats:{
     //errorDetails:true,

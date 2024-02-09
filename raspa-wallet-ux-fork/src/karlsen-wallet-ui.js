@@ -18,6 +18,8 @@ Wallet.setWorkerLogLevel(localStorage.walletWorkerLogLevel || 'none')
 
 export {html, css, FlowFormat, dpc, baseUrl, debug};
 
+const EXPLORER_URL = process.env.EXPLORER_URL || "http://localhost:3000"
+
 export class KarlsenWalletUI extends BaseElement{
 
 	static get properties() {
@@ -309,11 +311,11 @@ export class KarlsenWalletUI extends BaseElement{
 						<div class="tx-body">
 							${tx.note}
 							<div class="tx-id">
-								<a target="_blank" href="http://localhost:3000/txs/${tx.id}">${tx.id}</a>
+								<a target="_blank" href="${EXPLORER_URL}/txs/${tx.id}">${tx.id}</a>
 							</div>
 							<div class="tx-address">
 								${tx.myAddress?T('COMPOUNDING WALLET => '):''}
-								<a target="_blank" href="http://localhost:3000/addresses/${tx.address}">${tx.address}</a>
+								<a target="_blank" href="${EXPLORER_URL}addresses/${tx.address}">${tx.address}</a>
 							</div>
 						</div>
 					</flow-expandable>
@@ -355,11 +357,11 @@ export class KarlsenWalletUI extends BaseElement{
 						<div class="tx-amount">${tx.in?'':'-'}${KLS(tx.amount)} KLS</div>
 						<div class="br tx-note">${tx.note}</div>
 						<div class="br tx-id">
-							<a target="_blank" href="http://localhost:3000/txs/${tx.id.split(":")[0]}">${tx.id.split(":")[0]}</a>
+							<a target="_blank" href="${EXPLORER_URL}/txs/${tx.id.split(":")[0]}">${tx.id.split(":")[0]}</a>
 						</div>
 						<div class="tx-address">
 							${tx.myAddress?T('COMPOUNDING WALLET => '):''}
-							<a target="_blank" href="http://localhost:3000/addresses/${tx.address}">${tx.address}</a>
+							<a target="_blank" href="${EXPLORER_URL}addresses/${tx.address}">${tx.address}</a>
 						</div>
 					</div>`
 				})}
@@ -522,10 +524,10 @@ export class KarlsenWalletUI extends BaseElement{
 						<div class="tx-amount">${KLS(tx.satoshis)} KLS</div>
 						<div class="br tx-mass"></div>
 						<div class="br tx-id">
-							<a target="_blank" href="http://localhost:3000/txs/${tx.txId}">${tx.id}</a>
+							<a target="_blank" href="${EXPLORER_URL}/txs/${tx.txId}">${tx.id}</a>
 						</div>
 						<div class="tx-address">
-							<a target="_blank" href="http://localhost:3000/addresses/${tx.address}">${tx.address}</a>
+							<a target="_blank" href="${EXPLORER_URL}/addresses/${tx.address}">${tx.address}</a>
 						</div>
 					</div>`
 				})}
