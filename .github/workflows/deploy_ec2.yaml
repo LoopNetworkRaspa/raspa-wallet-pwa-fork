@@ -23,7 +23,7 @@ jobs:
 
       - name: Build docker image
         run: |
-          echo "EXPLORER_URL='${{ vars.DEV_EXPLORER_URL }}" >> .env
+          echo "EXPLORER_URL=${{ vars.DEV_EXPLORER_URL }}" >> .env
 
       - name: Build docker image
         run: |
