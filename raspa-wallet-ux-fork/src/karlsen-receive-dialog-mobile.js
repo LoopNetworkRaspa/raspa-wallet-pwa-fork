@@ -96,7 +96,7 @@ class KarlsenReceiveDialogMobile extends KarlsenDialog{
 		let {value=''} = input;
 		showT9({
 			value,
-			heading:input.label.replace("in KLS", ""),
+			heading:input.label.replace("in RAS", ""),
 			inputLabel:input.label
 		}, ({value, dialog})=>{
 			console.log("t9 result", value)

@@ -349,7 +349,7 @@ export class KarlsenWalletDesktop extends KarlsenWalletMobile{
 					return html`<div class="tx-notification">
 						${n.compoundUTXOs?
 							html`${T('Compounding UTXOs...')}`:
-							i18n.t(`Preparing transaction for [n] KLS ....`)
+							i18n.t(`Preparing transaction for [n] RAS ....`)
 								.replace('[n]', this.formatKLS(n.amount))}
 					</div>`
 				})}

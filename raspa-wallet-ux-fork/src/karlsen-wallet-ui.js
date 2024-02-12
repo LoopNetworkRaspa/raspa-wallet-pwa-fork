@@ -276,7 +276,7 @@ export class KarlsenWalletUI extends BaseElement{
 					return html`<div class="tx-notification">
 						${n.compoundUTXOs?
 							T(`Compounding UTXOs...`):
-							i18n.t(`Preparing transaction for [n] KLS ....`)
+							i18n.t(`Preparing transaction for [n] RAS ....`)
 							.replace('[n]', this.formatKLS(n.amount))}
 					</div>`
 				})}
@@ -301,7 +301,7 @@ export class KarlsenWalletUI extends BaseElement{
 						<div class="tx-title" slot="title">
 							<div class="tx-date flex">${tx.date}</div>
 							<div class="amount">
-								${tx.in?'':'-'}${this.formatKLS(tx.amount)} KLS
+								${tx.in?'':'-'}${this.formatKLS(tx.amount)} RAS
 							</div>
 						</div>
 						${ 0<=cfm&cfm<=COUNT? html`<flow-progressbar class="tx-progressbar" 
@@ -1181,7 +1181,7 @@ export class KarlsenWalletUI extends BaseElement{
 		console.log("$$$$$$$ INIT NETWORK SETTINGS", { network, rpc });
 
 		if(!rpc)
-			return FlowDialog.alert(i18n.t("Error"), i18n.t("Karlsen Daemon config is missing."));
+			return FlowDialog.alert(i18n.t("Error"), i18n.t("Raspa Daemon config is missing."));
 
 		this.initDaemonRPC();
 		this.initHelpers();
@@ -1441,7 +1441,7 @@ export class KarlsenWalletUI extends BaseElement{
 		}, ({value:amount, dialog})=>{
 			let sompis = formatForMachine(amount||0);
 			if(sompis > this.faucetFundsAvailable){
-				let msg = i18n.t(`You can't request more than [n] KLS.`)
+				let msg = i18n.t(`You can't request more than [n] RAS.`)
 						.replace("[n]", KLS(this.faucetFundsAvailable||0))
 				return dialog.setError(msg);//'
 			}

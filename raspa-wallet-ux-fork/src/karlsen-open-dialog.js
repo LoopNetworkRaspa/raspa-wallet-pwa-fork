@@ -152,7 +152,7 @@ class KarlsenOpenDialog extends KarlsenDialog{
 	}
 	renderInitUI(){
 		return html`
-			<div class="sub-heading text-center" is="i18n-div">Welcome to Karlsen Wallet</div>
+			<div class="sub-heading text-center" is="i18n-div">Welcome to Raspa Wallet</div>
 		`
 	}
 	renderRecoverUI(){

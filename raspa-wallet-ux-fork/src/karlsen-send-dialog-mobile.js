@@ -83,7 +83,7 @@ class KarlsenSendDialogMobile extends KarlsenDialog{
 					@click="${this.showT9}"><fa-icon icon="keyboard"></fa-icon></flow-btn>
 			</flow-input>
 			<flow-input class="fee full-width" suffix-btn outer-border
-				label="${T('Priority Fee in KLS')}"
+				label="${T('Priority Fee in RAS')}"
 				@keyup="${this.onNetworkFeeChange}">
 				<flow-btn slot="suffix" class="primary"
 					@click="${this.showT9}"><fa-icon icon="keyboard"></fa-icon></flow-btn>
@@ -199,7 +199,7 @@ class KarlsenSendDialogMobile extends KarlsenDialog{
 		let {value=''} = input;
 		showT9({
 			value,
-			heading:input.label.replace("in KLS", ""),
+			heading:input.label.replace("in RAS", ""),
 			inputLabel:input.label
 		}, ({value, dialog})=>{
 			console.log("t9 result", value)
@@ -276,7 +276,7 @@ class KarlsenSendDialogMobile extends KarlsenDialog{
     	if(!estimate)
     		return
     	if(estimate.fee > this.alertFeeAmount){
-			let msg = i18n.t('Transaction Fee ([n] KLS) is very large.');
+			let msg = i18n.t('Transaction Fee ([n] RAS) is very large.');
 			msg = msg.replace('[n]', KLS(estimate.fee));
     		let {btn} = await FlowDialog.alert("Warning", 
     			html`${msg}`,

@@ -1,7 +1,7 @@
 {
   "name": "@karlsen/ux",
   "version": "1.0.30",
-  "description": "Karlsen Wallet User Interface Framework",
+  "description": "Raspa Wallet User Interface Framework",
   "main": "karlsen-ux.js",
   "private": true,
   "repository": {

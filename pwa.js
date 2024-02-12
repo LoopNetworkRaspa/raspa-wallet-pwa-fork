@@ -490,7 +490,7 @@ class KarlsenPWA extends EventEmitter {
 		const program = this.program = new Command();
 		program
 			.version('0.0.1', '--version')
-			.description('Karlsen Node Wallet')
+			.description('Raspa Node Wallet')
 			.helpOption('--help','display help for command')
 			.option('--log <level>',`set log level ${logLevels.join(', ')}`, (level)=>{
 				if(!logLevels.includes(level))

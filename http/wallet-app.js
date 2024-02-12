@@ -19,7 +19,7 @@ class KarlsenWalletHeader extends BaseElement{
 			}
 			.logo{
 				height:30px;width:30px;/*background-color:#DDD;*/
-				background:no-repeat url('/resources/images/karlsen.png') center;
+				background:no-repeat url('/raspa-wallet-ux-fork/resources/images/karlsen.png') center;
 				background-size:contain;
 			}
 			.flex{flex:1}

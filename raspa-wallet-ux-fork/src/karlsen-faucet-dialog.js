@@ -21,7 +21,7 @@ class KarlsenFaucetDialog extends KarlsenDialog{
         return html`
             ${ this.status ? html`<div>${this.status}</div>` : html`
                 <div is="i18n">Available:</div>
-                <div>${KLS(available)} KLS</div>
+                <div>${KLS(available)} RAS</div>
 
                 ${this.period ? html`
                     <div><span is="i18n">Additional funds will be<br/>available in</span> ${FlowFormat.duration(this.period)}</div>

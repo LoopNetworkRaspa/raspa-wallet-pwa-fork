@@ -284,7 +284,7 @@ class KarlsenSendDialog extends KarlsenDialog {
         if (!estimate)
             return
         if (estimate.fee > this.alertFeeAmount) {
-            let msg = i18n.t('Transaction Fee ([n] KLS) is too large.');
+            let msg = i18n.t('Transaction Fee ([n] RAS) is too large.');
             msg = msg.replace('[n]', KLS(estimate.fee));
             let {btn} = await FlowDialog.alert("Warning",
                 html`${msg}`,

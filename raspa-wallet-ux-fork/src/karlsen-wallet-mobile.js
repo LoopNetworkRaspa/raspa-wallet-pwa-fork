@@ -564,8 +564,8 @@ export class KarlsenWalletMobile extends KarlsenWalletUI {
         let PWAVersion = window.PWA?.version || '';
 
         let donationAddresses = [
-            ["Karlsen Devfund donations:", "karlsen:qzrq7v5jhsc5znvtfdg6vxg7dz5x8dqe4wrh90jkdnwehp6vr8uj7csdss2l7"],
-            ["Karlsen WebWallet donations:", "karlsen:qqe3p64wpjf5y27kxppxrgks298ge6lhu6ws7ndx4tswzj7c84qkjlrspcuxw"],
+            ["Raspa Devfund donations:", "raspadev:qzzerwk6ug64dr0f68gnces8jjute965gr4p0yhwyxanx2xgfc4xcaez60t6j"],
+            ["Raspa WebWallet donations:", "raspadev:qzzerwk6ug64dr0f68gnces8jjute965gr4p0yhwyxanx2xgfc4xcaez60t6j"],
         ]
 
         return html`
@@ -662,7 +662,7 @@ export class KarlsenWalletMobile extends KarlsenWalletUI {
                                     <span is="i18n-span">DONATIONS</span>
                                 </div>
                                 <p is="i18n-p">
-                                    if you wish to further the development of the karlsen ecosystem, we accept donations
+                                    if you wish to further the development of the raspa ecosystem, we accept donations
                                     at the following addresses:
                                 </p>
                                 ${
@@ -685,22 +685,22 @@ export class KarlsenWalletMobile extends KarlsenWalletUI {
                                     <fa-icon icon="caret-right"></fa-icon>
                                     <span is="i18n-span">DEVELOPER INFO</span>
                                 </div>
-                                <div class="badge"><span is="i18n-span">Karlsen Core KLS:</span>
+                                <div class="badge"><span is="i18n-span">Raspa Core RAS:</span>
                                     ${window.PWA_MODULES['@karlsen/core-lib']}
                                 </div>
-                                <div class="badge"><span is="i18n-span">Karlsen Wallet Framework KLS:</span>
+                                <div class="badge"><span is="i18n-span">Raspa Wallet Framework RAS:</span>
                                     ${window.PWA_MODULES['@karlsen/wallet']}
                                 </div>
-                                <div class="badge"><span is="i18n-span">Karlsen gRPC:</span>
+                                <div class="badge"><span is="i18n-span">Raspa gRPC:</span>
                                     ${window.PWA_MODULES['@karlsen/grpc']}
                                 </div>
-                                <div class="badge"><span is="i18n-span">Karlsen gRPC Relay:</span>
+                                <div class="badge"><span is="i18n-span">Raspa gRPC Relay:</span>
                                     ${window.PWA_MODULES['@karlsen/grpc-web']}
                                 </div>
-                                <div class="badge"><span is="i18n-span">Karlsen UX KLS:</span>
+                                <div class="badge"><span is="i18n-span">Raspa UX RAS:</span>
                                     ${window.PWA_MODULES['@karlsen/ux']}
                                 </div>
-                                <div class="badge"><span is="i18n-span">Flow UX KLS:</span>
+                                <div class="badge"><span is="i18n-span">Flow UX RAS:</span>
                                     ${window.PWA_MODULES['@aspectron/flow-ux']}
                                 </div>
                             </flow-expandable>
@@ -715,7 +715,7 @@ export class KarlsenWalletMobile extends KarlsenWalletUI {
                                     <div class="margin-bottom" is="i18n-div">KARLSEN FAUCET</div>
                                     <div>${i18nFormat('Your IP is [n]', this.ip || "")}</div>
                                     <div class="margin">
-                                        ${i18nHTMLFormat('You have <b>[n] KLS</b> available.', KLS(this.faucetFundsAvailable || 0))}
+                                        ${i18nHTMLFormat('You have <b>[n] RAS</b> available.', KLS(this.faucetFundsAvailable || 0))}
                                     </div>
 
                                     ${this.faucetPeriod ? html`

@@ -10,12 +10,12 @@ cd node-karlsen-ux
 ## Donations
 
 It is much appreciated if you consider a donation, you can do to the
-following addresses to support Kaspa and Karlsen:
+following addresses to support Kaspa and Raspa:
 
-Kaspa Devfund donations: `kaspa:precqv0krj3r6uyyfa36ga7s0u9jct0v4wg8ctsfde2gkrsgwgw8jgxfzfc98`
+Kaspa Devfund donations: `raspadev:qzzerwk6ug64dr0f68gnces8jjute965gr4p0yhwyxanx2xgfc4xcaez60t6j`
 
-Kaspa Mining address: `kaspa:pzhh76qc82wzduvsrd9xh4zde9qhp0xc8rl7qu2mvl2e42uvdqt75zrcgpm00`
+Kaspa Mining address: `raspadev:qzzerwk6ug64dr0f68gnces8jjute965gr4p0yhwyxanx2xgfc4xcaez60t6j`
 
-Karlsen Devfund donations: `karlsen:qzrq7v5jhsc5znvtfdg6vxg7dz5x8dqe4wrh90jkdnwehp6vr8uj7csdss2l7`
+Raspa Devfund donations: `raspadev:qzzerwk6ug64dr0f68gnces8jjute965gr4p0yhwyxanx2xgfc4xcaez60t6j`
 
-Karlsen WebWallet donations: `karlsen:qqe3p64wpjf5y27kxppxrgks298ge6lhu6ws7ndx4tswzj7c84qkjlrspcuxw`
+Raspa WebWallet donations: `raspadev:qzzerwk6ug64dr0f68gnces8jjute965gr4p0yhwyxanx2xgfc4xcaez60t6j`
